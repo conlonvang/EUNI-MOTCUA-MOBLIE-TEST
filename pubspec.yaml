@@ -1,0 +1,51 @@
+name: euni_daotao_mobile
+description: "A new Flutter project."
+
+publish_to: 'none' 
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.4 <4.0.0'
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  euni_core_ui:
+    git:
+      url: https://github.com/ZM-soft/eUni-core-ui.git
+      # url: git@github.com:ZM-soft/eUni-core-ui.git
+      ref: dev
+
+
+  cupertino_icons: ^1.0.6
+  flutter_dotenv: ^5.1.0
+  dartz: ^0.10.1
+  package_info_plus: ^4.2.0
+  flutter_easyloading: ^3.0.5
+  jwt_decoder: ^2.0.1
+  path_provider: ^2.1.4
+  carousel_slider: ^5.0.0
+  shimmer: ^3.0.0
+  horizontal_data_table: ^4.3.1
+  syncfusion_flutter_charts: ^22.1.39
+  url_launcher: ^6.1.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.0
+
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/.env.development
+    - assets/.env.production
+
