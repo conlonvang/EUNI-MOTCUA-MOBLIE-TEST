@@ -5,6 +5,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'apps/configs/config_loading.dart';
 import 'apps/store/authen/authen_cubit.dart';
 import 'data/repositories/interceptors.dart';
@@ -12,17 +13,29 @@ import 'routers/factory_routes_singleton.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await EasyLocalization.ensureInitialized();
   NavigationService().setupNavigator();
+
   if (kReleaseMode) {
     await dotenv.load(fileName: "assets/.env.production");
   } else {
     await dotenv.load(fileName: "assets/.env.development");
   }
+
   ConfigLoading().configLoading();
   await initApp(HttpInterceptorsDaoTao());
   await Hive.openBox(BoxHiveLocalDaoTao.dbHiveLocalDaoTao);
 
-  runApp(const MyApp());
+  runApp(
+    EasyLocalization(
+      supportedLocales: const [
+        Locale('vi', 'VN')
+      ],
+      path: 'lib/translations',
+      fallbackLocale: const Locale('vi', 'VN'),
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -51,6 +64,9 @@ class MyApp extends StatelessWidget {
             useMaterial3: true,
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple).copyWith(background: const Color(0xffF5F5F5)),
           ),
+          locale: context.locale,
+          supportedLocales: context.supportedLocales,
+          localizationsDelegates: context.localizationDelegates,
           routerConfig: router,
         ),
       ),

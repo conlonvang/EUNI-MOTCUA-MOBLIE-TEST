@@ -10,6 +10,7 @@ class RouteConfigName {
   static const XEM_DIEM = '/xem-diem';
   static const XEM_DIEM_CHI_TIET = '/xem-diem-chi-tiet';
   static const HOC_PHI = '/Hoc-phi';
+  static const THOI_KHOA_BIEU = '/Thoi-khoa-bieu';
 
   static String passParams(String routeName, Map<String, dynamic> params, {Map<String, dynamic>? appends}) {
     routeName = mapParamsToRoute(routeName, params);

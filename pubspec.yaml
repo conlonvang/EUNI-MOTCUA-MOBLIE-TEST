@@ -33,6 +33,8 @@ dependencies:
   horizontal_data_table: ^4.3.1
   syncfusion_flutter_charts: ^22.1.39
   url_launcher: ^6.1.8
+  syncfusion_flutter_calendar: ^22.2.12
+  easy_localization: ^3.0.7
 
 dev_dependencies:
   flutter_test:
@@ -48,4 +50,5 @@ flutter:
     - assets/images/
     - assets/.env.development
     - assets/.env.production
+    - lib/translations/
 

@@ -75,6 +75,12 @@ GoRouter routerGoRoutes = GoRouter(
             child: HocPhiView(),
           ),
         ),
+         GoRoute(
+          path: RouteConfigName.THOI_KHOA_BIEU,
+          builder: (_, GoRouterState state) => const RouteAwareWidget(
+            child: ThoiKhoaBieuView(),
+          ),
+        ),
       ],
     ),
   ],

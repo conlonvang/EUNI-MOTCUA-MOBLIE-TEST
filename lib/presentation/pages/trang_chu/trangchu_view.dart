@@ -30,7 +30,7 @@ class _TrangChuViewState extends State<TrangChuView> {
     IconTrangChu(
       title: "Thời khóa biểu",
       bgIconColor: const Color(0xffF13838),
-      route: RouteConfigName.DEFAULT,
+      route: RouteConfigName.THOI_KHOA_BIEU,
       icon: Icons.calendar_month_outlined,
     ),
     IconTrangChu(

@@ -2,6 +2,7 @@ import 'package:euni_core_ui/euni_core_ui.dart';
 import 'package:euni_daotao_mobile/presentation/components/middleware/route_aware_widget.dart';
 import 'package:euni_daotao_mobile/presentation/pages/chuongtrinh_daotao/chuongtrinh_daotao/chuongtrinh_daotao_view.dart';
 import 'package:euni_daotao_mobile/presentation/pages/hoc_phi/hocphi_view.dart';
+import 'package:euni_daotao_mobile/presentation/pages/thoi_khoa_bieu/thoi_khoa_bieu_view.dart';
 import 'package:euni_daotao_mobile/presentation/pages/xem_diem/xemdiem_view.dart';
 import 'package:euni_daotao_mobile/routers/routes.name.dart';
 import 'package:flutter/material.dart';

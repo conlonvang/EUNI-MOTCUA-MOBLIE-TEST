@@ -27,11 +27,11 @@ class XemDiemSate extends Equatable {
     DataXemDiem? dataXemDiem,
     List<HeaderXemDiem>? headerXemDiem,
     SourceXemDiem? sourceXemDiem,
-     List<DiemMonHocHeader>? diemMonHocHeader,
-   List<DiemMonHoc>? diemMonHoc,
-   List<DiemThanhPhanHeader>? diemThanhPhanHeader,
-   List<DiemThanhPhan>? diemThanhPhan,
-   List<TongKetDiem>? tongKetDiem,
+    List<DiemMonHocHeader>? diemMonHocHeader,
+    List<DiemMonHoc>? diemMonHoc,
+    List<DiemThanhPhanHeader>? diemThanhPhanHeader,
+    List<DiemThanhPhan>? diemThanhPhan,
+    List<TongKetDiem>? tongKetDiem,
   }) {
     return XemDiemSate(
       isLoading: isLoading ?? this.isLoading,
@@ -42,7 +42,7 @@ class XemDiemSate extends Equatable {
       diemMonHoc: diemMonHoc ?? this.diemMonHoc,
       diemThanhPhanHeader: diemThanhPhanHeader ?? this.diemThanhPhanHeader,
       diemThanhPhan: diemThanhPhan ?? this.diemThanhPhan,
-      tongKetDiem:  tongKetDiem ?? this.tongKetDiem,
+      tongKetDiem: tongKetDiem ?? this.tongKetDiem,
     );
   }
 
